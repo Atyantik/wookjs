@@ -6,6 +6,7 @@ export const {
   remove_action,
   remove_filter,
   remove_all_actions,
+  remove_all_filters,
   has_action,
   has_filter,
   apply_filters,
