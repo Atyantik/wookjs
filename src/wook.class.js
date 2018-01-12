@@ -26,7 +26,7 @@ export default class Wook {
     priority = sanitizePriority(priority);
     const targetObject = this.getTargetObject(target);
     if (typeof targetObject[tag] === "undefined") {
-      targetObject[tag] = new Hook(tag, {async: false});
+      targetObject[tag] = new Hook(tag, {async: target === "filters"});
     }
     targetObject[tag].add_hook(func, priority);
     return true;
@@ -69,6 +69,7 @@ export default class Wook {
   }
 
   async apply_filters (tag, value, ...otherArgs) {
+    console.log(tag, value, otherArgs);
     tag = sanitizeTag(tag);
     if (typeof this.filters[tag] !== "undefined") {
       value = await this.filters[tag].apply_hooks(value, ...otherArgs);

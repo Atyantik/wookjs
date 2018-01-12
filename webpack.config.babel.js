@@ -28,6 +28,7 @@ export default {
     library: "wook",
     libraryTarget: "umd"
   },
+  devtool: (process.env.NODE_ENV === "production" ? false: "source-map"),
   plugins: [
     new CleanWebpackPlugin(["./dist"]),
     ...(process.env.NODE_ENV === "production"? [new MinifyPlugin()]: [])

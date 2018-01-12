@@ -1,11 +1,11 @@
 {
   "name": "wook",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "WordPress like hooks and filters API for JavaScript projects. ",
   "main": "dist/wook.min.js",
   "module": "src/index.js",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "cross-env NODE_ENV=development webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 0"
