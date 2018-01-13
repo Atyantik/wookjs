@@ -1,6 +1,6 @@
 {
   "name": "wook",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "WordPress like hooks and filters API for JavaScript projects. ",
   "main": "dist/wook.min.js",
   "module": "src/index.js",
